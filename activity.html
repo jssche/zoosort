@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <title>Activities Zoosort</title>
+</head>
+
+<body>
+    <main id="product-list">
+        <header>
+            <a href="./index.html"><img src="./images/logo3.png" alt="Zoosort logo"></a>
+            <nav class="headernav">
+                <ul>
+                    <li><a href="./room.html">Room</a></li>
+                    <li><a href="./activity.html">Activity</a></li>
+                    <li><a href="./animals.html">Animals</a></li>
+                    <li><a href="./resort.html">Resort</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <form>
+            <div id="booking-form">
+                <div class="form-item">
+                    <label for="form-activity-date">Date</label><br>
+                    <input type="date" id="activity-date">
+                </div>
+
+                <div class="form-item">
+                    <label for="form-activity_type">Activity</label><br>
+                    <select name="form-activity_type" id="form-activity_type">
+                        <option></option>
+                        <option>Safari Tour</option>
+                        <option>Animal Encounter</option>
+                        <option>Zookeeper Experience</option>
+                        <option>Wildlife Hospital Tour</option>
+
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label for="form-activity-time">Time</label><br>
+                    <select name="form-activity-time" id="form-activity-time">
+                        <option></option>
+                        <option value="10:00-12:00">10:00-12:00</option>
+                        <option value="12:00-14:00">12:00-14:00</option>
+                        <option value="14:00-16:00">14:00-16:00</option>
+                        <option value="16:00-18:00">16:00-18:00</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label for="form-number-of-guest">Guest</label><br>
+                    <input type="number" id="form-number-of-guest" min="1" max="4">
+                </div>
+
+                <div class="form-item">
+                    <input type="button" id="form-availability" value="Book"
+                        onclick="getActivityDetails()">
+                </div>
+            </div>
+        </form>
+
+        <section class="content">
+            <article class="list-page-product" data-scroll-class="fadeInBottom">
+                <a href="./safari_tour.html">
+                    <section class="overlay-container">
+                        <img class="list-page-product-img-1" src="./images/active-activity-adult-386136.jpg"
+                            alt="safari-tour">
+                        <div class="overlay">
+                            <p class="overlay_text">Find More Details</p>
+                        </div>
+                    </section>
+                    <p class="list-page-product-code">01</p>
+                    <h1 class="list-page-product-name">Safari Tour</h1>
+                    <hr>
+                    <p class="list-page-product-discription">Hear the call of nature? Hop on a 4-wheel-drive and join
+                        our professional rangers for a day's adventure in the wild. A must-to-do for our guests and an
+                        experience that you won't forget.</p>
+                    <p class="list-page-product-find-details">Find Details</p>
+                </a>
+            </article>
+
+            <article class="list-page-product" data-scroll-class="fadeInBottom">
+                <a href="animal_encounter.html">
+                    <p class="list-page-product-code">02</p>
+                    <h1 class="list-page-product-name">Animal Encounter</h1>
+                    <hr>
+                    <p class="list-page-product-discription">Feed a wombat, cuddle a koala, or get a selfie with
+                        quokkas. Get up close and personal with our cutest animals and learn more about them. Perfet
+                        activity for family fun. </p>
+                    <p class="list-page-product-find-details">Find Details</p>
+                    <section class="overlay-container">
+                        <img class="list-page-product-img-2" src="./images/animal-animal-photography-avian-3029739.jpg"
+                            alt="giraffe-encounter">
+                        <div class="overlay">
+                            <p class="overlay_text">Find More Details</p>
+                        </div>
+                    </section>
+                </a>
+            </article>
+
+            <article class="list-page-product" data-scroll-class="fadeInBottom">
+                <a href="zookeeper_experience.html">
+                    <section class="overlay-container">
+                        <img class="list-page-product-img-3" src="./images/alligator-animal-man-1868861.jpg"
+                            alt="zookeeper-experience">
+                        <div class="overlay">
+                            <p class="overlay_text">Find More Details</p>
+                        </div>
+                    </section>
+                    <p class="list-page-product-code">03</p>
+                    <h1 class="list-page-product-name">Zookeeper Experience</h1>
+                    <hr>
+                    <p class="list-page-product-discription"> Have you ever wondered what a zookeeper's day is like?
+                        Stop wondering and experience it yourself. Guided by our experienced zookeeper, you have the
+                        opportunity to enter the enclosure to help to prepare the delicious food for the animals, give
+                        them a pat and even a bath.</p>
+                    <p class="list-page-product-find-details">Find Details</p>
+                </a>
+            </article>
+
+            <article class="list-page-product" data-scroll-class="fadeInBottom">
+                <a href="wildlife_hospital_tour.html">
+                    <p class="list-page-product-code">04</p>
+                    <h1 class="list-page-product-name">Wildlife Hospital Tour</h1>
+                    <hr>
+                    <p class="list-page-product-discription">Explore the behind scenes at Blackhorse Wildlife Hospital.
+                        Learn more about the medical care available to wild animals, observe how precious wildlife are
+                        saved in person and check out the rehabilitation areas. </p>
+                    <p class="list-page-product-find-details">Find Details</p>
+                    <section class="overlay-container">
+                        <img class="list-page-product-img-4" src="./images/adult-care-close-up-1350591.jpg"
+                            alt="wildlife-hospital">
+                        <div class="overlay">
+                            <p class="overlay_text">Find More Details</p>
+                        </div>
+                    </section>
+                </a>
+            </article>
+
+
+        </section>
+
+        <div id="scroll-down" data-scroll-class="fadeOutBottom">
+            <img src="./images/arrow.png" alt="scroll-down-arrow">
+            <p>Scroll Down</p>
+        </div>
+
+        <footer>
+            <nav class="foottool">
+                <ul>
+                    <li><a id="book-now" href="#">BOOK A ROOM</a></li>
+                    <li><a id="activity-planner" href="#">ACTIVITY PLANNER</a></li>
+                    <li><a id="contact-us" href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+
+
+    </main>
+
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/scrollClass.min.js"></script>
+    <script>
+        function getActivityDetails() {
+            var activity_name = document.getElementById("form-activity_type").value;
+            localStorage.setItem("activity_name", activity_name);
+            var activity_date = document.getElementById("activity-date").value;
+            localStorage.setItem("activity_date", activity_date);
+            var activity_guests = document.getElementById("form-number-of-guest").value;
+            localStorage.setItem("activity_guests", activity_guests);
+            var activity_time = document.getElementById("form-activity-time").value;
+            localStorage.setItem("activity_time",activity_time);
+            window.alert("The activity has been booked and added to your planner.");
+        }
+    </script>
+</body>
+
+</html>

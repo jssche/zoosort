@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <title>Cave Room Zoosort</title>
+</head>
+<body >
+    <main id="product">
+    <header>
+        <a href="./index.html"><img src="./images/logo3.png" alt="Zoosort logo"></a>
+        <nav class="headernav">
+            <ul>
+                    <li><a href="./room.html">Room</a></li>
+                    <li><a href="./activity.html">Activity</a></li>
+                    <li><a href="./animals.html">Animals</a></li>
+                    <li><a href="./resort.html">Resort</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="video-container">
+    <video autoplay muted loop >
+            <source src="./images/Pexels-Videos-2681.mp4" type="video/mp4">
+    </video>
+    </section>
+
+    <form>
+        <div id="booking-form">
+        <div class="form-item">
+            <label for="form-arrival-date">Arrival Date</label><br>
+            <input type="date" id="form-arrival-date">
+        </div>
+
+        <div class="form-item">
+                <label for="form-depature-date">Depature Date</label><br>
+                <input type="date" id="form-depature-date">
+            </div>
+
+        <div class="form-item">
+            <label for="form-number-of-guest">Guest</label><br>
+            <input type="number" id="form-number-of-guest" min="1" max="4">
+        </div>
+
+        <div class="form-item">
+                <label for="form-room_type">Room Type</label><br>
+                <select name="form-room_type" id="form-room_type">
+                    <option></option>
+                    <option>Underwater Room</option>
+                    <option>Wetland Room</option>
+                    <option>Cave Room</option>
+                    <option>Grassland Room</option>
+                </select>
+        </div>
+
+        <div class="form-item">
+            <input type="button" id="form-availability" value="Book" onclick="window.alert('Your room has been booked.')">
+        </div>
+        </div>
+    </form>
+
+    <section class="content">
+        
+        <nav class="breadcrumb">
+            <a href="./room.html">Room</a>
+            <p>/</p>
+            <a href="#">Cave Room</a>
+        </nav>
+        
+        <article class="product">
+            
+            <h1 class="list-page-product-name">Cave Room</h1>
+            <p>60sqm 1 King Bed</p>
+            <hr>
+            <p class="list-page-product-discription">Are you an animal lover or a thrill seaker? Adjoined to a variety of habitats across Zoosort, a glass wall is all between you and the most fierce animals in the world.</p>
+            <section class="product-details">
+                <p>Features</p>
+                <ul>
+                    <li>Located in animal encolsures</li>
+                    <li>Floor-to-ceiling glass walls</li>
+                    <li>Close encounter with the most amazing animals on the planet</li>
+                    <li>60sqm spacious room</li>
+                    <li>Complimentary welcome champagne</li>
+                    <li>Complimentary Zookeeper Experience</li>
+                </ul>
+                <p>Amentities</p>
+                <ul>
+                    <li>Bathrobe</li>
+                    <li>Shampoo</li>
+                    <li>Conditioner</li>
+                    <li>Body soap</li>
+                    <li>Cotton pads</li>
+                    <li>Slippers</li>
+                    <li>Mouthwash</li>
+                    <li>Toothbrush</li>
+                    <li>Hair-dryer</li>
+                </ul>
+            </section>        
+        </article>
+    </section>
+
+    <footer>
+        <nav class="foottool">
+            <ul>
+                <li><a id="book-now" href="#">BOOK A ROOM</a></li>
+                <li><a id="activity-planner" href="#">ACTIVITY PLANNER</a></li>
+                <li><a id="contact-us" href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    
+
+    </main>
+
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/scrollClass.min.js"></script>
+</body>
+</html>

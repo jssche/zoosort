@@ -1,0 +1,940 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1em;
+}
+
+
+/* Index Page */
+main#homepage{
+    background-image:url(../images/animal-photography-daylight-elephant-247431-large2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+}
+
+#homepage header{ 
+    background-image: linear-gradient(to bottom, rgba(30, 58, 69, 1),rgba(255,255,255,0) );  
+    min-height: 20vh;
+}
+
+header img{
+    width: 7em;
+    margin-left:4em ;
+    margin-top: 1em;
+    float: left;
+    overflow: hidden;
+}
+
+.headernav {
+    float: right;
+}
+
+.headernav ul{
+    display:flex;
+    padding-top: 3em;
+    padding-right: 3em;
+}
+
+.headernav li {
+    list-style: none;
+    padding: 2em 1em;
+}
+
+.headernav li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.headernav li a:hover{
+    color: rgba(154, 152, 114, 1);
+    font-weight: bold;
+    transition: ease 0.3s;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.foottool ul{
+    display: flex;
+    justify-content: space-around;
+    padding:0.5em;
+    background-color:  rgba(30, 58, 69,0.8);
+}
+
+.foottool li{
+    list-style: none;
+    width:70%;
+    text-align: center;
+}
+
+.foottool a{
+    text-decoration: none;
+    color: white;
+    padding:0.5em;
+    display: block;
+    text-shadow: rgba(0,0,0,0.3) 3px 3px 5px;
+}
+
+.foottool a:hover{
+    background-color: rgba(154, 152, 114, 0.8);
+    transition: ease 0.3s;
+}
+
+
+/* Horizontal Booking Form*/
+#product-list header {
+    background-color: rgb(30, 58, 69);
+    width:100%;
+    height: 145px;
+}
+
+#product-list form{
+    background-color: rgb(30, 58, 69);
+    width:100%;
+}
+
+form #booking-form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2em;
+    width:90vw;
+}
+
+.form-item{
+    color: rgb(154, 152, 114);
+    text-align: center;
+}
+
+.form-item #form-availability{
+    border:2px solid rgb(154, 152, 114);
+    padding:0.5em;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(154, 152, 114);
+    border-radius: 2em;
+    position: relative;
+    top:0.5em;
+}
+
+.form-item #form-availability:hover{
+    color:rgba(30, 58, 69, 1);
+    background-color: rgb(154, 152, 114);
+    border: 2px solid rgb(154, 152, 114);
+    transition: ease 0.5s;
+    color: white;
+}
+
+.form-item input, select{
+    background-color: rgb(30, 58, 69);
+    border:none;
+    border-bottom:2px solid rgb(154, 152, 114);
+    text-align: center;
+    color:white;
+}
+
+#form-number-of-guest{
+    padding:0.2em;
+}
+
+.form-item select{
+    padding:0.1em;
+}
+
+/* Product List - Room*/
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin:3em 12vw;
+    text-align: left;
+    line-height: 2em;
+}
+
+.list-page-product{
+    padding:2em;
+    width: 30vw;
+    opacity: 0;
+    position: relative;
+    top: 5em;
+}
+
+.list-page-product.fadeInBottom{
+    opacity: 1;
+    transition: ease-in-out 0.8s;
+    top: 0;
+}
+
+.list-page-product-img-1, .list-page-product-img-4{
+    width:30vw;
+    padding-top: 1em;
+}
+
+.list-page-product-img-2, .list-page-product-img-3{
+    width:25vw;
+    display:block;
+    margin:auto;
+    padding-top: 1em;
+}
+
+.list-page-product-code{
+    font-size: 0.8em;
+}
+
+.list-page-product-name{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color:rgba(30, 58, 69, 1); 
+}
+
+.list-page-product-discription{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: justify;
+}
+
+.list-page-product hr{
+    width:2vw;
+}
+
+.list-page-product a{
+    text-decoration: none;
+    color: 	rgb(112, 112, 112);
+}
+
+.list-page-product-find-details{
+    text-align: right;
+    font-weight: bold;
+    color: rgba(30, 58, 69, 1);
+}
+
+/* Product List - Room - hover effect*/
+
+.overlay-container{
+    position: relative;
+}
+
+.list-page-product a:hover .overlay{
+    opacity: 1;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color:rgba(255, 255, 255, 0.6) ;
+    transition: ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay_text{
+    color: rgb(30, 58, 69);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Breadcrumb*/
+
+.breadcrumb{
+    margin-bottom: 1em;
+    color: rgb(154, 152, 114);
+    font-weight: 600;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+    color: rgb(154, 152, 114);
+}
+
+.breadcrumb p{
+    display: inline;
+}
+
+.breadcrumb a:hover{
+    text-decoration: underline;
+}
+
+/* Product - Room */
+
+#product header, #animals header ,#about_us header{
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    height: 145px;
+}
+
+#product form{
+    width:100%;
+    position: relative;
+    top:-1em;
+    background-color: rgb(30, 58, 69);
+}
+
+#product .content{
+    flex-direction: column;
+    margin: 3em 10vw;
+    padding-bottom: 5vh;
+}
+
+#product .content .product{
+    width: 80vw;
+}
+
+#product-list #scroll-down{
+    position: absolute;
+    bottom: 20%;
+    color: rgb(30, 58, 69);
+    font-weight: bold;
+    opacity: 1;
+    animation: scroll 2s infinite;
+    display: block;
+    left: 50%;
+}
+
+@keyframes scroll{
+    25% {bottom: 18%;}
+    75% {bottom: 18%;}
+    100% {bottom: 20%;}
+}
+
+#product-list #scroll-down img{
+    width: 5%;
+    float: left;
+    padding-right: 1em;
+}
+
+#product-list .fadeOutBottom#scroll-down{
+    opacity: 0;
+}
+
+.video-container{
+    width: 100%;
+    max-height: 71vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+video{
+    width:100%;
+
+}
+
+.product-details li{
+    list-style: none;
+    width:25vw;
+}
+
+.product-details p {
+    color: rgb(30, 58, 69);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-top: 2em;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.product-details ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#product .headernav a, #animals .headernav a, #about_us .headernav a{
+    color: rgb(30, 58, 69);
+    font-weight: bold;
+}
+
+#product .headernav a:hover, #animals .headernav a:hover, #about_us .headernav a:hover{
+    color: rgb(154, 152, 114);
+    font-weight: bold;
+}
+
+/* Product - Activity */
+.breadcrumb-activity{
+    font-weight: 600;
+}
+
+.breadcrumb-activity a{
+    color:rgb(30, 58, 69);
+    text-decoration: none;
+}
+
+.activity{
+    margin-top: 3em;
+    background-color:rgb(30, 58, 69);
+    padding: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.activity h1{
+    color: rgb(154, 152, 114);
+    font-size: 2vmax;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    position: absolute;
+    top: -16px;    
+    width: 100%;
+}
+
+/* Product - Activity - slideshow */
+.activity .cycle-slideshow{
+    width: 60%;
+    position: relative;
+    bottom: 6em;
+    left: 5em;
+}
+
+.activity .cycle-slideshow img{
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.3) 3px 3px 5px;
+}
+
+/* Product - Activity - buttons */
+.activity section{
+    width: 40%;
+    color:rgb(188,188,188);
+    padding-top: 0.5vh;
+}
+
+.activity section > div{
+    padding-top: 0.5em;
+}
+
+.activity section a{
+    padding-top: 1em;
+    color: rgb(154, 152, 114);
+    text-decoration: none;
+}
+
+.activity .intro {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.activity-booking p::before{
+    content: "+ ";
+}
+
+.visible .activity-booking p::before{
+    content: "- ";
+}
+
+.activity-booking:hover{
+    text-shadow: rgba(154, 152, 114,0.3) 3px 3px 5px;
+    font-weight: 600;
+}
+
+.activity-booking-options{
+    display: none;
+}
+
+.visible .activity-booking-options{
+    display: block;    /* Show expand content when JavaScript is enabled */
+    background-color: rgb(30, 58, 69);
+    border:1px solid rgb(154, 152, 114);
+    text-align: center;
+    color:white;
+    padding: 0.4em;
+}
+
+.visible .buttons{
+    display: flex;
+}
+
+.visible button{
+    margin-right: 1em;
+}
+
+.book-button{
+    padding:0.5em;
+    color: white;
+    border-radius: 2em;
+    font-weight: bold;
+    margin-top: 2em;
+    background-color: rgba(30, 58, 69, 1);
+    border: 2px solid rgb(154, 152, 114);
+}
+
+.book-button:hover{
+    border:2px solid rgb(154, 152, 114);
+    background-color: rgb(154, 152, 114);
+    transition: ease 0.5s;
+}
+
+/* Product - Activity - Customer Review*/
+
+.customer-review h1{
+    color: rgba(30, 58, 69, 1);
+    font-size: 2vmax;
+    font-family: 'Montserrat Subrayada', sans-serif; 
+    width: 100%;
+    padding-top: 3em;
+    text-align: center;
+}
+
+.review-details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 3em;
+    opacity: 0;
+}
+
+.review-details.fadeIn{
+    opacity: 1;
+    transition: ease-in-out 0.8s;
+}
+
+.reviewer-info{
+    width: 40%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewer-info section p:first-child{
+    font-weight: bold;
+    color: rgba(30, 58, 69, 1);
+    font-style: italic;
+    padding-bottom: 0.5em;
+}
+
+.review{
+    width: 60%;
+}
+
+.star{
+    width:20px;
+}
+
+.review p{
+    padding-right:5vw;
+    text-align: justify;
+}
+
+/* Animal Page*/
+
+#animals .content ,#about_us .content{
+    margin-top: 0em;
+}
+
+iframe{
+    width: 70vw;
+    height: 56vh;
+}
+
+.description{
+    background-color: rgba(30, 58, 69, 1);
+    width: 80%;
+    padding: 1em;
+    color: rgb(188,188,188);
+    position: relative;
+    bottom: 0.8em;
+    text-align: justify;
+}
+
+.description p:first-of-type{
+    text-align: center;
+    color: rgb(154, 152, 114);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Montserrat Subrayada', sans-serif;
+    font-size: 2em;
+}
+.video-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.video-button-1,.video-button-2,.video-button-3,.video-button-4{
+    padding:0.5em;
+    color: white;
+    margin: 1em;
+    background-color: rgba(30, 58, 69, 1);
+    border: 1px solid rgb(154, 152, 114);
+    border-radius: 2em;
+    width: 8em;
+}
+
+.video-button-1:hover, .video-button-2:hover, .video-button-3:hover,.video-button-4:hover{
+    border:1px solid rgb(154, 152, 114);
+    background-color: rgb(154, 152, 114);
+    transition: ease 0.5s;
+}
+
+/*About Us Page*/
+#about_us .content img{
+    width: 90%;
+    height: auto;
+}
+
+#about_us .content .description{
+    width: 70%;
+    top:-2em;
+    text-align: justify;
+}
+
+/* Model */
+#popup{
+    position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.75);
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.modal{
+    background: rgba(30, 58, 69, 1);
+    width: 70vw;
+    height: 70vh;
+    padding:0em 2vw;
+	box-shadow: rgba(0,0,0,0.25) 5px 5px 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.modal h1{
+    line-height: 1em;
+}
+
+.modal figure{
+    width: 40%;
+    max-width: 40em;
+}
+
+.modal .img-wrapper{
+    overflow: hidden;
+}
+
+.modal figure img{
+    height: 70vh;
+    display: inline-block;
+    position: relative;
+    
+}
+
+/* Model - Book */
+.modal #book{
+    width: 55%;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal #booking-form{
+    width: 35vw;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    padding:0em;
+}
+
+.modal #booking-form .form-item {
+    padding: 1.5em 0em ;
+}
+
+.modal .close-button a{
+    color: rgb(154, 152, 114);
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1em;
+    text-transform: uppercase;
+    width: 5%;
+    position: relative;
+    top: 2em;
+}
+
+.modal .close-button a:before{
+    content: "\2716"; /* Unicode for an 'x' icon */
+	padding-right: 5px;
+}
+
+/* Model - Contact*/
+.contact, .planner, .reference{
+    text-align: left;
+    margin: auto;
+    padding-left: 3em;
+    width: 55%;
+    padding-top: 1em;
+}
+
+.contact #contact-wrappe, .planner #planner-wrapper, .reference #reference-wrapper{
+    width: 100%;
+}
+
+.contact h1, .planner h1, .reference h1{
+    padding-bottom: 1.5em;
+    color: rgb(154, 152, 114);
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.contact p, .planner p, .reference p{
+    padding-bottom: 0.5em;
+    color: rgb(188,188,188);
+}
+
+.contact #social-media-wrapper img{
+    width: 2em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.contact iframe{
+    width: 100%;
+    height: 30vh;
+}
+
+.planner .planner-details-name {
+    padding-top: 1em;
+    color:rgb(154, 152, 114);
+}
+
+.planner #clear-booking-button, .planner #confirm-booking-button{
+    color: white;
+    border-radius: 2em;
+    margin-top: 2em;
+    background-color: rgba(30, 58, 69, 1);
+    border: 2px solid rgb(154, 152, 114);
+    padding: 0.5em;
+    text-align: center;
+}
+
+.planner #confirm-booking-button{
+    width: 4em;
+}
+
+.planner #clear-booking-button:hover, .planner #confirm-booking-button:hover{
+    border:2px solid rgb(154, 152, 114);
+    background-color: rgb(154, 152, 114);
+    transition: ease 0.5s;
+}
+
+
+
+
+
+
+@media only screen and (max-width:800px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-height:300px;
+    }
+
+    header img{
+        display: block;
+        margin: auto;
+        padding-top: 2em;
+        width: 5em;
+        float: none;
+    }
+
+    .headernav ul{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .headernav ul li{
+        padding:1em 1em;
+    }
+
+    .headernav ul a{
+        color: rgb(154, 152, 114);
+        font-size: bold;
+    }
+
+    #homepage .headernav ul a{
+        color:white;
+    }
+
+    #product-list #booking-form, #product #booking-form{
+        flex-wrap: wrap;
+        width: 80vw;
+    }
+
+    #product-list .form-item, #product .form-item{
+        margin-bottom: 1em;
+    }
+
+    .list-page-product{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .list-page-product img{
+        width: 100%;
+    }
+
+    .foottool{
+        width: 100vw;
+    }
+
+    .product-details ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-details li{
+        width:90vw;
+    }
+
+    #product .content{
+        width: 90%;
+        margin:auto;
+    }
+
+    .breadcrumb-activity{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .activity{
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom: 2em;
+    }
+
+    .activity h1{
+        top: 0;
+        padding: 1em 0 1em 1em;
+        position: static;
+        order: 0;
+    }
+
+    .activity section{
+        width:90%;
+        margin:auto;
+        padding:1em;
+        order: 2;
+    }
+
+    .activity .cycle-slideshow{
+        bottom: 0;
+        order: 1;
+     }
+
+    .customer-review{
+        width: 100%;
+    }
+
+    .review-details{
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding-right:0;
+        margin:auto;
+    }
+    
+    .review{
+        width:100%;
+    }
+
+    .reviewer-info section{
+        width:90%;
+        text-align: center;
+    }
+
+    .review-details p{
+        width:90%;
+        padding-right: 0;
+        margin:auto;
+    }
+
+    #animals .content, #about_us .content{
+        margin: 2em 1em;
+    }
+
+    #animals iframe{
+        width: 100%;
+    }
+
+    #animals .description{
+        bottom: 0; 
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #animals .video-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about_us .content .description{
+        top: 0;
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #about_us .content img{
+        width: 100%;
+    }
+
+    .modal {
+        width: 90vw;
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal figure{
+        display: none;
+    }
+
+    .modal .close-button{
+        order: -1;
+        align-self: flex-end;
+        margin-bottom: 2em;
+        margin-right:1em;
+    }
+
+    .modal #book{
+        margin: 2em;
+    }
+
+    .modal .planner, .modal .contact, .modal .reference{
+        padding: 0;
+    }
+
+    
+}
+

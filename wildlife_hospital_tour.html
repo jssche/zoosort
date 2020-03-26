@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <title>Wildlife Hospital Tour Zoosort</title>
+</head>
+<body >
+    <main id="product">
+    <header>
+        <a href="./index.html"><img src="./images/logo3.png" alt="Zoosort logo"></a>
+        <nav class="headernav">
+            <ul>
+                    <li><a href="./room.html">Room</a></li>
+                    <li><a href="./activity.html">Activity</a></li>
+                    <li><a href="./animals.html">Animals</a></li>
+                    <li><a href="./resort.html">Resort</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        
+        <nav class="breadcrumb-activity">
+            <a href="./activity.html">Activity</a>
+            <span>/</span>
+            <a href="#">Wildlife Hospital Tour</a>
+        </nav>
+        
+        <article class="activity">
+            
+            <h1 id="activity-name">Wildlife Hospital Tour</h1>
+
+            <section>
+                <p class="intro">Explore the behind scenes at Blackhorse Wildlife Hospital. Learn more about the medical care available to wild animals, observe how precious wildlife are saved in person and check out the rehabilitation areas. </p>
+                
+                <div>
+                    <a class="activity-booking" href="#"><p>Select Date</p></a>   
+                    <input class="activity-booking-options"  type="date" id="activity-date">                   
+                </div>
+                
+                <div>
+                    <a class="activity-booking" href="#"><p>Select Time</p></a>
+                    <div class="buttons"> 
+                        <button type="button" class="activity-booking-options" value="10:00" onclick="getActivityTime(value)">10:00</button>
+                        <button type="button" class="activity-booking-options" value="12:00" onclick="getActivityTime(value)">12:00</button>
+                        <button type="button" class="activity-booking-options" value="14:00" onclick="getActivityTime(value)">14:00</button>
+                        <button type="button" class="activity-booking-options" value="16:00" onclick="getActivityTime(value)">16:00</button>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <a class="activity-booking" href="#"><p>Select Guest</p></a>
+                    <input class="activity-booking-options" type="number" min="1" max="4" id="activity-guest">
+                </div>
+
+                <abbr title="Add selected tour to your Activity Planner"><input type="submit" value="Add"
+                    class="book-button" onclick="getActivityDetails()">
+                </abbr>
+
+            </section>
+            
+            <div class="cycle-slideshow">
+                <img src="./images/adult-animal-close-up-1591173.jpg" alt="hospital-bird">
+                <img src="./images/adult-animal-care-1350593.jpg" alt="hospital-cat">
+                <img src="./images/animal-breed-brown-730067.jpg" alt="hospital-dog">
+            </div>
+
+        </article>
+
+        <article class="customer-review">
+            <h1>Customer Reviews</h1>
+
+            <div class="review-details" data-scroll-class="fadeIn">
+                <div class="reviewer-info">
+                    <section>
+                        <p>Alice Rosewood</p>
+                        <p>Seattle USA</p>
+                        <p>28 Oct 2019</p>
+                    </section>
+                </div>
+
+                <div class="review">
+                    <img class="star" src="./images/star.png" alt="star">
+                    <img class="star" src="./images/star.png" alt="star">
+                    <img class="star" src="./images/star.png" alt="star">
+                    <img class="star" src="./images/star.png" alt="star">
+                    <img class="star" src="./images/star.png" alt="star">
+                    <p>Aboslutely loved it! I have been an animal lover for my whole lifehood. I wanted to be a zookeeper since I was a kid. When my friend Jane told me about this place, I booked straight away and it turned out one of my best travel experience. Our ranger James is very professional and helpfule. Definetly recommend it!</p>
+                </div>
+            </div>
+
+            <div class="review-details" data-scroll-class="fadeIn">
+                    <div class="reviewer-info">
+                        <section>
+                            <p>Alice Rosewood</p>
+                            <p>Seattle USA</p>
+                            <p>28 Oct 2019</p>
+                        </section>
+                    </div>
+    
+                    <div class="review">
+                        <img class="star" src="./images/star.png" alt="star">
+                        <img class="star" src="./images/star.png" alt="star">
+                        <img class="star" src="./images/star.png" alt="star">
+                        <img class="star" src="./images/star.png" alt="star">
+                        <img class="star" src="./images/star.png" alt="star">
+                        <p>Aboslutely loved it! I have been an animal lover for my whole lifehood. I wanted to be a zookeeper since I was a kid. When my friend Jane told me about this place, I booked straight away and it turned out one of my best travel experience. Our ranger James is very professional and helpfule. Definetly recommend it!</p>
+                    </div>
+                </div>
+
+
+                <div class="review-details" data-scroll-class="fadeIn">
+                        <div class="reviewer-info">
+                            <section>
+                                <p>Alice Rosewood</p>
+                                <p>Seattle USA</p>
+                                <p>28 Oct 2019</p>
+                            </section>
+                        </div>
+        
+                        <div class="review">
+                            <img class="star" src="./images/star.png" alt="star">
+                            <img class="star" src="./images/star.png" alt="star">
+                            <img class="star" src="./images/star.png" alt="star">
+                            <img class="star" src="./images/star.png" alt="star">
+                            <img class="star" src="./images/star.png" alt="star">
+                            <p>Aboslutely loved it! I have been an animal lover for my whole lifehood. I wanted to be a zookeeper since I was a kid. When my friend Jane told me about this place, I booked straight away and it turned out one of my best travel experience. Our ranger James is very professional and helpfule. Definetly recommend it!</p>
+                        </div>
+                    </div>
+    
+            </article>
+    </section>
+
+    <footer>
+        <nav class="foottool">
+            <ul>
+                <li><a id="book-now" href="#">BOOK A ROOM</a></li>
+                <li><a id="activity-planner" href="#">ACTIVITY PLANNER</a></li>
+                <li><a id="contact-us" href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    
+
+    </main>
+    <script>  //Get form input value and store it in the local storage
+        function getActivityTime(value){
+            //console.log(value);
+            var activity_name = value;
+            localStorage.setItem("activity_time",value);
+        }
+    
+        function getActivityDetails(){   
+            var activity_name = document.getElementById("activity-name").textContent;
+            localStorage.setItem("activity_name", activity_name);
+            //console.log(activity_name);
+            var activity_date = document.getElementById("activity-date").value;
+            //console.log(activity_date);
+            localStorage.setItem("activity_date",activity_date);
+            var activity_guests = document.getElementById("activity-guest").value;
+            //console.log(activity_guests);
+            localStorage.setItem("activity_guests",activity_guests);
+            window.alert("The activity has been added to your planner.");
+        }
+    </script>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery.cycle2.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/scrollClass.min.js"></script>
+</body>
+</html>
